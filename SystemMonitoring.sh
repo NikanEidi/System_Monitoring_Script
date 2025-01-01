@@ -1,32 +1,3 @@
-
-#  System Monitoring Script for macOS
-
-## Overview
-This script monitors the system's CPU, memory, disk, and network usage on macOS. It logs the data into a file, generates alerts when thresholds are exceeded, and displays the latest logs for review.
-
-## Features
-- **Dynamic Network Detection**: Automatically detects the primary network interface.
-- **Custom Thresholds**: Set specific thresholds for CPU, memory, and disk usage.
-- **Friendly Logging**: Logs are stored in an organized format with separators and alerts.
-- **Tailored Alerts**: Alerts are triggered when usage exceeds the defined thresholds.
-
-## Usage
-1. Clone or download this script.
-2. Make the script executable:
-   ```bash
-   chmod +x system_monitor.sh
-   ```
-3. Run the script:
-   ```bash
-   ./system_monitor.sh
-   ```
-4. Check the log file for details:
-   ```bash
-   cat unique_system_monitor.log
-   ```
-
-## Script Content
-```bash
 #!/bin/bash
 
 # System Monitoring Script for macOS
@@ -98,13 +69,3 @@ log_separator
 tail -n 10 "$LOG_FILE"
 
 # End of Script
-```
-
-## Requirements
-- macOS
-- Basic shell utilities (`top`, `vm_stat`, `df`, `netstat`, `awk`, `sed`, `bc`)
-
-## Notes
-- Ensure the script has execute permissions before running.
-- Adjust thresholds as needed to match your system's performance expectations.
-
